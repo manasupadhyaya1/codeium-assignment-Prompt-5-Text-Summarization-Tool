@@ -10,33 +10,35 @@ A web-based text summarization tool built with Streamlit and NLTK.
 - Download summaries
 - Clean and modern UI
 
-## Installation
+## Running with Docker
+
+You can run this application in two ways:
+
+### Option 1: Pull from Docker Hub
+```bash
+docker pull YOUR_DOCKERHUB_USERNAME/text-summarizer:latest
+docker run -p 8501:8501 YOUR_DOCKERHUB_USERNAME/text-summarizer:latest
+```
+
+### Option 2: Build Locally
+```bash
+docker build -t text-summarizer .
+docker run -p 8501:8501 text-summarizer
+```
+
+Access the application at: http://localhost:8501
+
+## Running Locally Without Docker
 
 1. Clone the repository
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
-## Running Locally
-
+3. Run the application:
 ```bash
 streamlit run app.py
 ```
-
-## Docker Setup
-
-Build the container:
-```bash
-docker build -t text-summarizer .
-```
-
-Run the container:
-```bash
-docker run -p 8501:8501 text-summarizer
-```
-
-Access the application at: http://localhost:8501
 
 ## How it Works
 
